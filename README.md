@@ -1,29 +1,12 @@
 # JwvGettingStarted
 
-Steps in this commit: install the client-side jadice dependencies
+Steps in this commit: replace the dummy frontend with a simple viewer version
 
-**Prerequisites**
-* first of all, you need to have an npm account. An already existing mvn account at the jadice nexus will most probably not suffice.
-* To create one, create a ticket at https://levigo.de/support/ or send an email to jadice-support@levigo.de
-* After the account is setup, you neet to login to via npm, so that a .npmrc file will be created in your user directory on your operating system.
-    * ```npm login https://artifacts.jadice.com/repository/npm-group```
+After checking out this commit, please build both client and server and then run them.
 
-After this is done, the content of the .npmrc should look something like:
-```
-registry=https://artifacts.jadice.com/repository/npm-group
-//artifacts.jadice.com/repository/:_authToken=<your_generated_token>
-```
+You will now see a viewer when openening ``localhost:4200``, that can now display documents, once you upload a document via the ``open file``file button in the upper left corner.
 
-**Changes done in this commit**
-* the necessary dependency settings were applied to the package.json
-* After editing the package.json and after setting up the auth token like described before, we made an ``npm install``
+This is done by the two jadice web viewer components included in the ``app.component.html`` file. The necessary wiring of those and releated code is found in the ``app.component.ts``
 
-**Test if all is setup**
-* create the auth token like described above
-* on this commit:
-* go the folder tutorial-001/client
-* run ``npm install`` on your machine
-* run ``npm run build``
-* run ``npm run start``
-* on ``localhost:4200`` you should now see the same results as at the end of tutorial 000 (dummy web page), 
-       only that now you have already installed all necessary jadice dependencies.
+Inside the main.ts, we bootstrap the precursor which will serve as a layer between angular and GWT.
+
