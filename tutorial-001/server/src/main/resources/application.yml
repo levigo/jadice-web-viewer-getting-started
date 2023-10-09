@@ -25,6 +25,8 @@ spring:
 webtoolkit:
   clientConfiguration:
     maxUploadFileSize: 50000000
+  annotationProfiles: /jwt-annotation-profile.xml, /jwt-demo-profile.xml
+  defaultAnnotationProfile: JWT-Demo-Profile
 
 logging:
   level:
