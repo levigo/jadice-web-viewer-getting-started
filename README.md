@@ -26,6 +26,7 @@ added functionality
 * thumbnail view
 * enhanced open file dialogue
 * simple reading mode
+* possibility to style the viewer, see [styling guide](https://webtoolkit.jadice.com/doc/docs/ng-client/styling)
 
 ### previous commits: ###
 please check the README.md of that specific commit
